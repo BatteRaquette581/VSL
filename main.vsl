@@ -1,0 +1,9 @@
+import bool
+arg = 5
+blob = []
+if arg == 5{
+  Console.out("foo")
+}
+if bool.Bool(blob){
+  Console.out("none")
+}
