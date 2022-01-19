@@ -13,20 +13,12 @@ def parse(base_code=[]):
       code.append(i)
   for i in lines:
     i = i.strip()
-    if i[-1] in ("{","[","("):
-      if i[-1] == "{":
-        i = i[0:-1]+":"
+    if i[-1] == "{":
+      i = i[0:-1]+": "
       space = 1
-    elif i[-1] in ("}",")","]"):
-      if i[-1] == "}":
-        i = i[0:-1]
+    elif i[-1] == "}":
+      i = i[0:-1]
       space = -1
-    try:
-      if i[-1] == ";":
-        i = i[0:-1]
-    except:
-      pass
-    print(spaces,space)
     if not i == "":
       code.append(spaces * " " + i)
     spaces += space*2
