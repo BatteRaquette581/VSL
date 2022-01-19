@@ -26,7 +26,6 @@ def parse(base_code=[]):
         i = i[0:-1]
     except:
       pass
-    print(spaces,space)
     if not i == "":
       code.append(spaces * " " + i)
     spaces += space*2
